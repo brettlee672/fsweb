@@ -6,5 +6,4 @@ applications:
   name: fspweb
   host: fspweb
   disk_quota: 1024M
-  services:
-  - fsp-chain
+
