@@ -1,0 +1,9 @@
+﻿[
+  {
+    "username": "farmer",
+    "password": "farmer",
+    "displayname" : "American Farmers",
+    "peer": "vp0",
+    "chaincodeid": "65fed8419192aeba7792a06771094aa60c3c408dbfc15372c12351b50b20e8ac58e7b6335053e1b3080efae60e439a0ed64320aa03e1d6b377edc57944ec467d"
+  }
+]

@@ -1,0 +1,211 @@
+<div data-role="view" data-title="Validating Peer" data-layout="main-nonav" data-model="app.vp01home" data-show="app.vp01home.onShow" data-after-show="app.vp01home.afterShow" id="vp01homeScreen" class="screen">
+    <header class="header">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a class="menu-toggle" href="#menu">
+                    <span class="access-hide">Menu</span>
+                    <span class="icon icon-menu icon-lg"></span>
+                    <span class="header-close icon icon-close icon-lg"></span>
+                </a>
+            </li>
+        </ul>
+        <a class="header-logo" href="index.html">FSCM</a>
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a class="menu-toggle" href="#profile">
+                    <span class="access-hide" data-bind="text : vpo01homeModel.displayname"></span>
+                    <span class="avatar avatar-sm"><img alt="" src="Material/images/users/avatar-001.jpg"></span>
+                    <span class="header-close icon icon-close icon-lg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">Trace Cattle</a>
+                        </li>
+                        <li>
+                            <a href="#">Cattle Catalog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="menu menu-right" id="profile">
+        <div class="menu-scroll">
+            <div class="menu-wrap">
+                <div class="menu-top">
+                    <div class="menu-top-img">
+                        <img alt="" src="Material/images/samples/landscape.jpg">
+                    </div>
+                    <div class="menu-top-info">
+                        <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt" src="Material/images/users/avatar-001.jpg"></span><span data-bind="text : vp01homeModel.displayname"></span></a>
+                    </div>
+                </div>
+                <div class="menu-content">
+                    <ul class="nav">
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Certificates</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon icon-exit-to-app"></span>Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="content-heading">
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="content-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-sm-12">
+                        <h1 class="content-sub-heading">Welcome <span data-bind="text : vp01homeModel.displayname"></span>!</h1>
+                        <hr />
+
+                        <h2 class="content-sub-heading">Get Cattle </h2>
+
+                        <div class="card-wrap">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="card-inner">
+                                                <form class="form">
+                                                    <div class="form-group form-group-label">
+                                                        <div class="row">
+                                                            <div class="col-md-10 col-md-push-1">
+                                                                <label class="floating-label" for="cattletagid">Cattle Tag</label>
+                                                                <input class="form-control" id="cattletagid" data-bind="value: vp01homeModel.cattleTagid" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card-action">
+                                                <div class="form-group-btn col-md-push-1">
+                                                    <button class="btn btn-blue btn-sm waves-button waves-light waves-effect" type="button" data-bind="events : { click: vp01homeModel.getcattle }"><span class="icon icon-add"></span>Get</button>
+                                                    <button class="btn waves-button btn-sm waves-effect" type="button">Cancel </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <h2 class="content-sub-heading">Cattle Catalog</h2>
+                        <div class="el-loading" id="el-loading-3">
+                            <div class="el-loading-indicator">
+                                <div class="progress progress-position-absolute-bottom">
+                                    <div class="load-bar">
+                                        <div class="load-bar-base">
+                                            <div class="load-bar-content">
+                                                <div class="load-bar-progress"></div>
+                                                <div class="load-bar-progress load-bar-progress-alt"></div>
+                                                <div class="load-bar-progress load-bar-progress-purple"></div>
+                                                <div class="load-bar-progress load-bar-progress-red"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="load-bar">
+                                        <div class="load-bar-base">
+                                            <div class="load-bar-content">
+                                                <div class="load-bar-progress"></div>
+                                                <div class="load-bar-progress load-bar-progress-red"></div>
+                                                <div class="load-bar-progress load-bar-progress-purple"></div>
+                                                <div class="load-bar-progress load-bar-progress-alt"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-wrap" style="min-height:200px;position:relative">
+
+                            </div>
+                        </div>
+
+                        <h2 class="content-sub-heading">Create Cattle</h2>
+
+                        <div class="card-wrap">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="card-inner">
+                                                <p class="text-center">
+                                                    <span class="avatar avatar-inline avatar-lg">
+                                                        <img alt="" src="components/vp0Home/cattleicon.png">
+                                                    </span>
+                                                </p>
+                                                <form class="form">
+                                                    <div class="form-group form-group-label">
+                                                        <div class="row">
+                                                            <div class="col-md-10 col-md-push-1">
+                                                                <label class="floating-label" for="cattleid">Cattle ID</label>
+                                                                <input class="form-control" id="cattleid" data-bind="value: vp01homeModel.cattleid" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-group-label">
+                                                        <div class="row">
+                                                            <div class="col-md-10 col-md-push-1">
+                                                                <label class="floating-label" for="cattletag">Cattle Tag</label>
+                                                                <input class="form-control" id="cattletag" data-bind="value: vp01homeModel.cattletag" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group form-group-label">
+                                                        <div class="row">
+                                                            <div class="col-md-10 col-md-push-1">
+                                                                <label class="floating-label" for="cattletype">Cattle Type</label>
+                                                                <input class="form-control" id="cattletype" data-bind="value: vp01homeModel.cattletype" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-group-label">
+                                                        <div class="row">
+                                                            <div class="col-md-10 col-md-push-1">
+                                                                <label class="floating-label" for="cattleweight">Cattle Weight</label>
+                                                                <input class="form-control" id="cattleweight" data-bind="value: vp01homeModel.cattleweight" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card-action">
+                                                <div class="form-group form-group-label">
+                                                    <div class="col-md-10 col-md-push-1">
+                                                        <div class="form-group-btn">
+                                                            <button class="btn btn-blue btn-sm waves-button waves-light waves-effect" type="button" data-bind="events :{click: vp01homeModel.createCattle} "><span class="icon icon-add"></span>Create</button>
+                                                            <button class="btn waves-button btn-sm waves-effect" type="button">Cancel </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <link href="//kendo.cdn.telerik.com/2016.3.1118/styles/kendo.common-nova.min.css" rel="stylesheet" />
+    <link href="//kendo.cdn.telerik.com/2016.3.1118/styles/kendo.nova.min.css" rel="stylesheet" />
+    <link href="Material/css/base.min.css" rel="stylesheet" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
+    <link href="styles/overrides.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body id="kendoUiMobileApp" class="page-blue">
+    
+
+    <div id="navigation-show-more-view" data-role="view" data-title="Show More" data-layout="main">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-bind="text: strings._app.showMoreTitle"></span>
+            </div>
+        </header>
+        <ul data-role="listview" data-style="inset" data-click="app.listViewClick">
+        </ul>
+    </div>
+
+    <div data-role="layout" data-id="main-nonav">
+        
+    </div>
+
+    <div id="notify" class="notify-pop-up">
+        <span class="notify-pop-up__content"></span>
+    </div>
+    <script src="Material/js/base.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.2.1008/js/kendo.all.min.js"></script>
+    <script src="app.js"></script>
+    <script src="components/home/home.js"></script>
+    <script src="components/vp0Home/vp01home.js"></script>
+</body>
+
+</html>
